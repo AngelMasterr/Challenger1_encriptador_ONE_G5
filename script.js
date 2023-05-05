@@ -52,7 +52,7 @@ function desencriptar() {
             ober: 'o',
             ufat: 'u',
         };
-        texto_encriptado = texto.replace(/ai|enter|imes|over|ufat/g, function (letters) {
+        texto_encriptado = texto.replace(/ai|enter|imes|ober|ufat/g, function (letters) {
             return obj_letters[letters];
         });
         console.log(texto_encriptado);
