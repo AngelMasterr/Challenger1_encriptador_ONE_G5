@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="style_botones.css" />
+        <link rel="stylesheet" href="style_switch_noche.css" />
+        <link rel="stylesheet" href="style_social_network.css" />
+        <!-- Font Awesome es una biblioteca de iconos vectoriales de código abierto y gratuita -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <!-- tipografia referenciada desde google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&display=swap" rel="stylesheet" />
+        <title>Encriptador</title>
+    </head>
+    <body>
+        <header>
+            <h3 class="text_titulo">Encriptador</h3>
+            <a href="https://app.aluracursos.com/dashboard" target="_blank">
+                <img class="logo_a" src="imagenes/logo_a.png" alt="logo_a" />
+            </a>
+            <label class="switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+            </label>
+        </header>
+        <main class="cuerpo_principal">
+            <section class="seccion_1">
+                <!-- input dinamico -->
+                <div class="contenedor_caja_texto1">
+                    <textarea name="perro" id="inp_text" class="caja_texto1" autocomplete="off" placeholder=" "></textarea>
+                    <!-- <input id="inp_text" type="text" class="caja_texto1" autocomplete="off" placeholder=" " /> -->
+                    <label for="inp_text" class="label_caja_texto1">Ingrese el texto aquí</label>
+                </div>
+
+                <div class="alerta">
+                    <img src="imagenes/exclamation1.png" alt="logo_alerta" />
+                    <p>Solo letras minusculas y sin acentos</p>
+                </div>
+                <div class="contenedor_botones">
+                    <button class="boton_encriptar">Encriptar</button>
+                    <button class="boton_desencriptar">Desencriptar</button>
+                    <button class="boton_limpiar">Limpiar</button>
+                </div>
+            </section>
+            <section class="seccion_2">
+                <div class="contenedor_seccion_2">
+                    <div class="resultado">
+                        <p class="texto_resultado"></p>
+                    </div>
+                    <h3 class="mensaje_no_encontrado">Ningun mensaje fue encontrado</h3>
+                    <div class="contenedor_dibujo_hacker">
+                        <img src="imagenes/hacker.png" alt="imagen_hacker3" id="img_hacker1" />
+                    </div>
+                    <div class="contenedor_parrafo">
+                        <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+                    </div>
+                    <div class="contenedor_copiar">
+                        <button onclick="" class="boton_copiar">Copiar</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="contenedor_social_network">
+                <a href="https://github.com/AngelMasterr" target="_blank">
+                    <i class="fa fa-github fa-2x icon-3d"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/angel-duarte-prog/" target="_blank">
+                    <i class="fa fa-linkedin fa-2x icon-3d"></i>
+                </a>
+                <a href="https://twitter.com/AngelDuartePro" target="_blank">
+                    <i class="fa fa-twitter fa-2x icon-3d"></i>
+                </a>
+            </div>
+            <a href="https://www.hackerrank.com/angelduarte" target="_blank" class="logo_angel">
+                <img src="imagenes/Logo_angel1.png" alt="logo_angel" />
+            </a>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

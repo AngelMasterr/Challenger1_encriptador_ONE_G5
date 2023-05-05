@@ -1,0 +1,336 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f4fc;
+    transition: 0.4s ease all;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+body.dark {
+    background-color: #2e2e2e;
+}
+
+/* contiene encabezado class text_titulo - imagen: logo_a*/
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 5%;
+    height: 5rem;
+}
+.text_titulo {
+    font-size: 1.7rem;
+    color: #41667e;
+    animation: text-focus-in 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+/* funcion aparezca titulo desvanecido*/
+@keyframes text-focus-in {
+    0% {
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+body.dark .text_titulo {
+    color: #ffffff;
+}
+
+/* Centrar y darle animacion de rotacion al logo de alura "a"*/
+.logo_a {
+    width: 1.7rem;
+    animation: rotacion 1s 1 3s;
+    transition: 0.8s linear 0s;
+}
+.logo_a:hover {
+    transform: rotate(720deg);
+}
+@keyframes rotacion {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+body.dark .logo_a {
+    content: url('imagenes/logo_a2.png');
+}
+
+.cuerpo_principal {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.seccion_1 {
+    font: 1em 'Inter', sans-serif;
+    position: relative;
+    height: 30rem;
+    width: 60%;
+}
+
+/* darle estilo dinamico a la caja de texto input*/
+.contenedor_caja_texto1 {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding-left: 8.5%;
+    padding-right: 3.5%;
+}
+.caja_texto1 {
+    width: 100%;
+    height: 5.47rem;
+    max-height: 350px;
+    font-family: 'Inter', sans-serif;
+    resize: none;
+    border: 2px solid #e1e5ee;
+    border-radius: 0.5rem;
+    color: #0a3871;
+    font-size: 1.3rem;
+    font-weight: 400;
+    outline: none;
+    padding: 1.2rem;
+    background: white;
+}
+/* Cambiar el borde cuando este el input focus*/
+.caja_texto1:hover {
+    border-color: #b3cfd8;
+}
+.caja_texto1:focus {
+    border-color: #5f8aa7;
+}
+body.dark .caja_texto1 {
+    background-color: #424242;
+    color: #ffffff;
+}
+
+/* crear el label dentro de la caja de texto*/
+.label_caja_texto1 {
+    position: absolute;
+    left: 11%;
+    top: 1.4rem;
+    padding: 0 0.5rem;
+    color: #888484;
+    font-size: 1.1rem;
+    cursor: text;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+/*Cuando el curosor este en la caja de texto, reducir el tamaño de la etiqueta y mover hacia arriba
+Mantener el estado de la etiqueta cuando el contenido está en el campo de entrada*/
+.caja_texto1:focus ~ .label_caja_texto1,
+.caja_texto1:not(:placeholder-shown).caja_texto1:not(:focus) ~ .label_caja_texto1 {
+    top: -0.5rem;
+    font-size: 0.8rem;
+}
+body.dark .label_caja_texto1 {
+    background-color: #424242;
+    color: #ffffff;
+}
+
+.alerta {
+    position: absolute;
+    display: flex;
+    bottom: 55px;
+    padding-left: 8.5%;
+    align-items: center;
+    gap: 10px;
+}
+body.dark .alerta {
+    color: #ffffff;
+}
+body.dark .alerta img {
+    content: url('imagenes/exclamation3.png');
+}
+
+.contenedor_botones {
+    position: absolute;
+    display: grid;
+    width: 100%;
+    bottom: 0;
+    padding-left: 8.5%;
+    padding-right: 3.5%;
+    /* grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); */
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    grid-gap: 15px;
+}
+
+.seccion_2 {
+    padding-right: 5%;
+    padding-left: 2%;
+    width: 40%;
+    height: 480px;
+}
+.contenedor_seccion_2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    height: 100%;
+    border-radius: 1rem;
+    padding: 15px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    background-color: #ffffff;
+    box-shadow: 6px 6px 12px #c5c5c5;
+}
+body.dark .contenedor_seccion_2 {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    box-shadow: 6px 6px 12px #000000;
+}
+
+.texto_resultado {
+    word-break: break-all;
+    max-height: 280px;
+    font-size: 1.2rem;
+    overflow: auto;
+    text-overflow: ellipsis;
+}
+.contenedor_dibujo_hacker img {
+    width: 100%;
+    max-width: 320px;
+}
+body.dark .contenedor_dibujo_hacker img {
+    content: url('imagenes/hacker-friend2.gif');
+}
+
+footer {
+    position: relative;
+    display: flex;
+    margin-top: 0.5rem;
+    padding: 0 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+footer img {
+    width: 2rem;
+}
+body.dark footer img {
+    content: url(imagenes/Logo_angel2.png);
+}
+
+/* llamar elementos desde script.js*/
+/* vibrar el mensaje "ningun mensaje fue encontrado*/
+.sacudir {
+    animation: sacudir 0.8s linear both;
+}
+@keyframes sacudir {
+    0%,
+    100% {
+        transform: rotate(0deg);
+        transform-origin: 50% 50%;
+    }
+    10% {
+        transform: rotate(8deg);
+    }
+    20%,
+    40%,
+    60% {
+        transform: rotate(-10deg);
+    }
+    30%,
+    50%,
+    70% {
+        transform: rotate(10deg);
+    }
+    80% {
+        transform: rotate(-8deg);
+    }
+    90% {
+        transform: rotate(8deg);
+    }
+}
+
+/* ocultar elementos para dar la respuesta */
+.ocultar {
+    display: none;
+}
+
+/* RESPONSIVE */
+/* TABLETS */
+@media only screen and (max-width: 768px) {
+    /* SECCION 1 */
+    .caja_texto1 {
+        max-height: 300px;
+    }
+    .label_caja_texto1 {
+        left: 12%;
+    }
+    .contenedor_botones {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+    .boton_encriptar {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .alerta {
+        bottom: 115px;
+    }
+}
+/* SMALL TABLETS */
+@media only screen and (max-width: 600px) {
+    /* SECCION 1 */
+    .seccion_1 {
+        width: 100%;
+    }
+    .contenedor_caja_texto1 {
+        padding: 0 5%;
+    }
+    .caja_texto1 {
+        max-height: 15rem;
+    }
+    .label_caja_texto1 {
+        left: 7.5%;
+    }
+    .contenedor_botones {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        bottom: 1rem;
+        grid-gap: 10px;
+        padding: 0 5%;
+    }
+    .boton_encriptar {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .alerta {
+        bottom: 11.5rem;
+        padding-left: 5%;
+    }
+    /* SECCION 2 */
+    .seccion_2 {
+        width: 100%;
+        padding: 0 5%;
+        height: 27rem;
+    }
+    .texto_resultado {
+        max-height: 15rem;
+    }
+
+    .contenedor_dibujo_hacker img {
+        max-width: 220px;
+    }
+}
+/* SMART PHONE */
+@media only screen and (max-width: 440px) {
+    * {
+        font-size: 0.9rem;
+        .alerta img {
+            width: 15px;
+        }
+    }
+}

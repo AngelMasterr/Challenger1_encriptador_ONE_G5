@@ -1,0 +1,38 @@
+.contenedor_social_network {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.icon-3d {
+    padding: 15px;
+    -webkit-animation: icon3d 200ms 10;
+    animation: icon3d 200ms 5;
+    color: #000000;
+}
+.icon-3d:hover {
+    -webkit-animation: icon3d 200ms infinite;
+    animation: icon3d 200ms infinite;
+}
+
+@keyframes icon3d {
+    0% {
+        text-shadow: 5px 4px #f44336, -5px -6px #2196f3;
+    }
+    25% {
+        text-shadow: -5px -6px #f44336, 5px 4px #2196f3;
+    }
+    50% {
+        text-shadow: 5px -4px #f44336, -8px 4px #2196f3;
+    }
+    75% {
+        text-shadow: -8px -4px #f44336, -5px -4px #2196f3;
+    }
+    100% {
+        text-shadow: -5px 0 #f44336, 5px -4px #2196f3;
+    }
+}
+
+body.dark .icon-3d {
+    color: #ffffff;
+}
