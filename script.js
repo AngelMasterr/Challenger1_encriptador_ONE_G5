@@ -24,7 +24,7 @@ function encriptar() {
             a: 'ai',
             e: 'enter',
             i: 'imes',
-            o: 'over',
+            o: 'ober',
             u: 'ufat',
         };
         texto_encriptado = texto.replace(/a|e|i|o|u/g, function (letters) {
@@ -49,7 +49,7 @@ function desencriptar() {
             ai: 'a',
             enter: 'e',
             imes: 'i',
-            over: 'o',
+            ober: 'o',
             ufat: 'u',
         };
         texto_encriptado = texto.replace(/ai|enter|imes|over|ufat/g, function (letters) {
