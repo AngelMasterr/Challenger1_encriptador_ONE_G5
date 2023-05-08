@@ -1,0 +1,217 @@
+/* Encriptador - Desktop */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.fondo-general {
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    background: #f3f5fc;
+}
+
+/* Logo - Auto layout*/
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
+    position: absolute;
+    width: 120px;
+    height: 48px;
+    left: 40px;
+    top: 40px;
+}
+
+/*Formulario*/
+.formulario {
+    display: inline-block;
+}
+
+/* Caja de ingrese el texto aqui */
+
+.cajadetexto {
+    /*Apariencia de la caja*/
+    border-width: 0;
+    background: 000;
+    position: absolute;
+    width: 577px;
+    height: 48px;
+    left: 240px;
+    top: 168px;
+    /*texto interno*/
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0a3871;
+}
+
+/*Alerta de indicaciones*/
+
+.alerta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+
+    position: absolute;
+    width: 229px;
+    height: 18px;
+    left: 240px;
+    top: 851px;
+}
+
+.textoalerta {
+    width: 205px;
+    height: 18px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    /* identical to box height, or 18px */
+    /* Gray/gray-400 */
+    color: #495057;
+    opacity: 0.8;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+/*Botones de encriptar y desincriptar*/
+
+.botonera {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    position: absolute;
+    width: 680px;
+    height: 67px;
+    left: 240px;
+    top: 885px;
+}
+
+.boton {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 24px;
+    width: 328px;
+    height: 67px;
+    border: 1px solid #0a3871;
+    border-radius: 24px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+}
+
+#encriptar {
+    background: #0a3871;
+    color: #ffffff;
+}
+
+.caja-resultado {
+    position: relative;
+    width: 400px;
+    height: 944px;
+    left: 1000px;
+    top: 40px;
+
+    /* White */
+
+    background: #ffffff;
+    /* shadow */
+
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+.personaje {
+    margin: 243px 32px 32px 32px;
+    width: 336px;
+    height: 304px;
+}
+
+.mensaje-resultado {
+    padding: 0px;
+    width: 336px;
+    margin: 0 32px 0 32px;
+}
+
+h2 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    /* or 29px */
+
+    text-align: center;
+
+    /* Gray/gray-500 */
+
+    color: #343a40;
+}
+
+.mensaje-resultado p {
+    /* Ingresa el texto que desees encriptar o desencriptar. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    margin: 16px 0 0 0;
+    position: absolute;
+    /* or 24px */
+
+    text-align: center;
+
+    /* Gray/gray-400 */
+
+    color: #495057;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+#copiar {
+    /*oculto en la primera etapa de recibir el input*/
+    width: 336px;
+    top: 885px;
+    position: fixed;
+    /*visibility:hidden;*/
+}
+
+#impresionParametros {
+    width: 336px;
+    margin: 32px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: #495057;
+}
