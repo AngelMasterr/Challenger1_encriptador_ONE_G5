@@ -80,8 +80,8 @@ function copiar_palabra_encriptada() {
 function sacudir_objeto(objeto) {
     const sacudir_obj = document.querySelector(`${objeto}`);
     sacudir_obj.classList.remove('ocultar');
-    sacudir_obj.classList.add('sacudir');
     contenedor_parrafo.classList.remove('opacidad');
+    sacudir_obj.classList.add('sacudir');
     setTimeout(() => {
         sacudir_obj.classList.remove('sacudir');
     }, 800);
