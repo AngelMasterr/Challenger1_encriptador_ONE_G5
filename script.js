@@ -102,7 +102,7 @@ function limpiar_caja_texto() {
 caja_texto1.addEventListener('input', function () {
     let text_input = caja_texto1.value;
     // Convertir a minúsculas y quitar caracteres no permitidos
-    text_input = text_input.toLowerCase().replace(/[^a-z\s]/g, '');
+    text_input = text_input.toLowerCase().replace(/[^a-zñ\s]/g, '');
     caja_texto1.value = text_input;
 });
 
