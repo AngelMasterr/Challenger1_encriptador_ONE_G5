@@ -90,10 +90,12 @@ function sacudir_objeto(objeto) {
 
 function limpiar_caja_texto() {
     caja_texto1.value = '';
+    texto_resultado.textContent = '';
     caja_texto1.style.height = 'auto';
     caja_texto1.style.height = `${caja_texto1.scrollHeight}px`;
-    sacudir_objeto('.contenedor_dibujo_hacker');
-    sacudir_objeto('.mensaje_no_encontrado');
+    contenedor_dibujo_hacker.classList.remove('ocultar');
+    mensaje_no_encontrado.classList.remove('ocultar');
+    contenedor_parrafo.classList.remove('opacidad');
 }
 
 // Detectar que solo introduzca letras minusculas y sin acentos
