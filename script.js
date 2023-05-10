@@ -81,6 +81,7 @@ function sacudir_objeto(objeto) {
     const sacudir_obj = document.querySelector(`${objeto}`);
     sacudir_obj.classList.remove('ocultar');
     contenedor_parrafo.classList.remove('opacidad');
+
     sacudir_obj.classList.add('sacudir');
     setTimeout(() => {
         sacudir_obj.classList.remove('sacudir');
