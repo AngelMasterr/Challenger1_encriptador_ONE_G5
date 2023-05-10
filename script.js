@@ -8,6 +8,7 @@ const boton_limpiar = document.querySelector('.boton_limpiar');
 const boton_copiar = document.querySelector('.boton_copiar');
 const contenedor_dibujo_hacker = document.querySelector('.contenedor_dibujo_hacker');
 const boton_switch = document.querySelector('.switch');
+const contenedor_parrafo = document.querySelector('.contenedor_parrafo');
 
 // Crear las funciones
 function encriptar() {
@@ -19,6 +20,7 @@ function encriptar() {
     } else {
         mensaje_no_encontrado.classList.add('ocultar');
         contenedor_dibujo_hacker.classList.add('ocultar');
+        contenedor_parrafo.classList.add('opacidad');
         let texto_encriptado = '';
         let obj_letters = {
             a: 'ai',
@@ -44,6 +46,8 @@ function desencriptar() {
     } else {
         mensaje_no_encontrado.classList.add('ocultar');
         contenedor_dibujo_hacker.classList.add('ocultar');
+        contenedor_parrafo.classList.add('opacidad');
+
         let texto_encriptado = '';
         let obj_letters = {
             ai: 'a',
@@ -77,6 +81,7 @@ function sacudir_objeto(objeto) {
     const sacudir_obj = document.querySelector(`${objeto}`);
     sacudir_obj.classList.remove('ocultar');
     sacudir_obj.classList.add('sacudir');
+    contenedor_parrafo.classList.remove('opacidad');
     setTimeout(() => {
         sacudir_obj.classList.remove('sacudir');
     }, 800);

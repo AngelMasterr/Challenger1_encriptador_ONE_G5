@@ -230,6 +230,9 @@ body.dark footer img {
 .sacudir {
     animation: sacudir 0.8s linear both;
 }
+.opacidad {
+    opacity: 0.3;
+}
 @keyframes sacudir {
     0%,
     100% {
